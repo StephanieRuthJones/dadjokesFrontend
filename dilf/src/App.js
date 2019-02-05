@@ -16,7 +16,7 @@ class App extends Component {
     const response = await fetch('http://localhost:3000')
     const json = await response.json()
     this.setState({ jokes: json })
-    this.generateMethod()
+    this.generateJoke()
   }
   //ternary for card vs loading bc loading delay for backend
 
@@ -25,8 +25,8 @@ class App extends Component {
     return Math.floor(Math.random() * (max - min)) + min
   }
 
-  generateMethod = () => {
-    console.log('gen method clicked')
+  generateJoke = () => {
+    console.log('gen joke clicked')
     const randomIndex = this.getRandomIntInclusive(this.state.jokes.length)
     const method = this.state.jokes[randomIndex]
     console.log(method)
