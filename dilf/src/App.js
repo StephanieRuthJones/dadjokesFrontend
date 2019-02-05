@@ -35,6 +35,7 @@ class App extends Component {
       joke: jokes.joke,
     })
   }
+  
   render() {
     return (
       <div className="container">
