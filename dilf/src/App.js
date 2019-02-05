@@ -3,6 +3,7 @@ import './App.css';
 import Date from './Components/Date'
 import Image from './Components/Image'
 import Joke from './Components/Joke'
+import DateComponent from './Components/Date';
 
 class App extends Component {
   constructor(props) {
@@ -12,12 +13,12 @@ class App extends Component {
     }
   }
 
-  async componentDidMount() {
-    const response = await fetch('http://localhost:3000')
-    const json = await response.json()
-    this.setState({ jokes: json })
-    this.generateJoke()
-  }
+  // async componentDidMount() {
+  //   const response = await fetch('http://localhost:3000')
+  //   const json = await response.json()
+  //   this.setState({ jokes: json })
+  //   this.generateJoke()
+  // }
   //ternary for card vs loading bc loading delay for backend
 
   getRandomIntInclusive = (max) => {
@@ -31,15 +32,15 @@ class App extends Component {
     const method = this.state.jokes[randomIndex]
     console.log(method)
     this.setState({
-      id: jokes.id,
-      joke: jokes.joke,
+      // id: jokes.id,
+      // joke: jokes.joke,
     })
   }
   
   render() {
     return (
       <div className="container">
-        <Date />
+        <DateComponent />
         <Image />
         <Joke />
       </div>
