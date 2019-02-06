@@ -1,0 +1,20 @@
+{
+  "name": "dadjokesfrontend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "react-scripts start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ikeD13/dadjokesFrontend.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ikeD13/dadjokesFrontend/issues"
+  },
+  "homepage": "https://github.com/ikeD13/dadjokesFrontend#readme",
+  "description": ""
+}
