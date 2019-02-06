@@ -7,6 +7,7 @@ const DateComponent = () => {
     return (
         <div className="container">
             <p>{date}</p>
+
         </div>
     )
 }

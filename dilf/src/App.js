@@ -13,39 +13,39 @@ class App extends Component {
     }
   }
 
-  // async componentDidMount() {
-  //   const response = await fetch('http://localhost:3000')
-  //   const json = await response.json()
-  //   this.setState({ jokes: json })
-  //   this.generateJoke()
-  // }
-  //ternary for card vs loading bc loading delay for backend
-
-  getRandomIntInclusive = (max) => {
-    const min = 0
-    return Math.floor(Math.random() * (max - min)) + min
+  async componentDidMount() {
+    const response = await fetch('http://localhost:8000')
+    const json = await response.json()
+    this.setState({ jokes: json })
+    this.generateJoke()
   }
 
-  generateJoke = () => {
-    console.log('gen joke clicked')
-    const randomIndex = this.getRandomIntInclusive(this.state.jokes.length)
-    const method = this.state.jokes[randomIndex]
-    console.log(method)
-    this.setState({
-      // id: jokes.id,
-      // joke: jokes.joke,
-    })
-  }
-  
-  render() {
-    return (
-      <div className="container">
-        <DateComponent />
-        <Image />
-        <Joke />
-      </div>
-    );
-  }
+getRandomIntInclusive = (max) => {
+  const min = 0
+  return Math.floor(Math.random() * (max - min)) + min
+}
+
+generateJoke = () => {
+  const randomIndex = this.getRandomIntInclusive(this.state.jokes.length)
+  const joke = this.state.jokes[randomIndex]
+  console.log(joke)
+  this.setState({
+    id: joke.id,
+    joke: joke.text,
+    url: joke.url
+  })
+}
+
+render() {
+  return (
+    <div className="container">
+      <Date />
+      <Image
+        url={this.state.url} />
+      <Joke
+        joke={this.state.joke} />
+    </div>
+  );
 }
 
 export default App;

@@ -1,9 +1,9 @@
 import React from 'react'
 
-const Joke = () => {
+const Joke = (props) => {
     return (
-        <div className="container">
-            <p>Joke</p>
+        <div className="container joke justify-content-center">
+            <p>{props.joke}</p>
         </div>
     )
 }
