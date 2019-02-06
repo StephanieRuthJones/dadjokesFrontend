@@ -3,6 +3,7 @@ import './App.css';
 import Date from './Components/Date'
 import Image from './Components/Image'
 import Joke from './Components/Joke'
+import DateComponent from './Components/Date';
 
 class App extends Component {
   constructor(props) {
@@ -18,23 +19,6 @@ class App extends Component {
     this.setState({ jokes: json })
     this.generateJoke()
   }
-  //ternary for card vs loading bc loading delay for backend
-  formatDate = (date) => {
-    var monthNames = [
-      "January", "February", "March",
-      "April", "May", "June", "July",
-      "August", "September", "October",
-      "November", "December"
-    ];
-
-    var day = date.getDate();
-    var monthIndex = date.getMonth();
-    var year = date.getFullYear();
-
-
-
-    this.setState({ date: { day + ' ' + monthNames[monthIndex] + ' ' + year } })
-}
 
 getRandomIntInclusive = (max) => {
   const min = 0
@@ -62,7 +46,6 @@ render() {
         joke={this.state.joke} />
     </div>
   );
-}
 }
 
 export default App;
