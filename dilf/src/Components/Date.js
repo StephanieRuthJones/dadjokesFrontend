@@ -1,9 +1,11 @@
 import React from 'react'
 
 const Date = () => {
+   
+
     return (
         <div className="container">
-            <p>Date</p>
+            <p>{formatDate()}</p>
         </div>
     )
 }
