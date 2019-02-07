@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './App.css';
-import Date from './Components/Date'
 import Image from './Components/Image'
 import Joke from './Components/Joke'
 import DateComponent from './Components/Date';
@@ -39,7 +38,7 @@ generateJoke = () => {
 render() {
   return (
     <div className="container">
-      <Date />
+      <DateComponent />
       <Image
         url={this.state.url} />
       <Joke
@@ -47,5 +46,5 @@ render() {
     </div>
   );
 }
-
+}
 export default App;
