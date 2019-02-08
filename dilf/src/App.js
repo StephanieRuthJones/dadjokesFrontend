@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
+
 import Header from './Components/Header'
+
 import Image from './Components/Image'
 import Joke from './Components/Joke'
 import DateComponent from './Components/Date';
@@ -48,6 +50,7 @@ class App extends Component {
       </div>
     );
   }
-}
 
+}
+}
 export default App;
