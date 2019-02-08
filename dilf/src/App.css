@@ -1,7 +1,9 @@
 
 body, html {
+  background-color: cyan;
+
   /* height: 100%; */
-  margin: 0;
+  margin: 1em;
 }
 
 .navbar{
@@ -21,19 +23,52 @@ ul > li {
   float: right;
 }
 
-img {
-  width: 100vw;
+.image-container{
+  display: flex;
+  padding: 1em;
+  align-content: center;
+  justify-content: center;
+  margin: 0;
+}
+
+.image-container > img {
+  justify-content: center;
+  width: 20em;
+  height: 15em;
 }
 
 .joke-box {
   justify-content: center;
   border: solid;
-  height: 45vh;
+  height: 40vh;
   width: 100vw;
   text-align: center;
   vertical-align: middle;
   display: table-cell;
   font-size: 1.5em;
+}
+
+@media only screen and (max-width: 768px) {}
+
+
+
+@media only screen and (min-width: 768px) {
+  .image-container>img {
+    justify-content: center;
+    width: 30em;
+    height: 30em;
+    margin: 1em;
+  }
+
+}
+
+@media only screen and (min-width: 1162px) {
+  .image-container>img {
+    justify-content: center;
+    width: 50em;
+    height: 35em;
+    margin: 2em;
+  }
 }
 
 
