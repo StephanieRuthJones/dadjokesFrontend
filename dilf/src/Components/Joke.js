@@ -2,7 +2,7 @@ import React from 'react'
 
 const Joke = (props) => {
     return (
-        <div className="container joke justify-content-center">
+        <div className="joke-box">
             <p>{props.joke}</p>
         </div>
     )
