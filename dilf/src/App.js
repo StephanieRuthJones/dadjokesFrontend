@@ -41,7 +41,6 @@ class App extends Component {
   render() {
     return (
       <div className="appcontainer">
-        <Header />
         <DateComponent />
         <Image
           url={this.state.url} />
